@@ -12,7 +12,7 @@ public class GetDataTest {
     public static List<DataTest> fromDataSource() throws Exception{
 
         ConvertExcelSheet convertExcelSheet =
-                new ConvertExcelSheet("C:\\workspace\\newmavenproject\\src\\test\\resources\\data\\data.xlsx","data");
+                new ConvertExcelSheet("src/test/resources/data/data.xlsx","data");
         return convertExcelSheet.to(DataTest.class);
 
     }

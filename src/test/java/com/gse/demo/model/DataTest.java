@@ -10,15 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DataTest {
+
+    private String scenario;
     private String dataUser;
     private String dataPassword;
-    private String pubId;
-    private String nameSubscription1;
-    private String nameSubscription2;
-    private String frameTime;
-    private String scenario;
-    private String topic;
-    private String application;
-    private String msjError;
 
 }
