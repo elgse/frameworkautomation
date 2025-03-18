@@ -10,7 +10,6 @@ import org.openqa.selenium.WebDriverException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
-import java.util.UUID;
 
 public class ScreenshotHook {
 
@@ -41,7 +40,7 @@ public class ScreenshotHook {
     private void takeScreenShot(Scenario scenario){
         final byte[] screenshot =((TakesScreenshot)webDriver).getScreenshotAs(OutputType.BYTES);
         try{
-            scenario.attach(screenshot,"media/png", UUID.randomUUID().toString());
+            scenario.attach(screenshot,"image/png", screenshot.toString());
         }catch(WebDriverException wde){
             System.out.println("There was an error taking the screenshot"+wde.getMessage());
         }
